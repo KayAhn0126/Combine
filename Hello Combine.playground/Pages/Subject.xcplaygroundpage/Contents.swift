@@ -39,5 +39,5 @@ variable.send("More text")
 
 
 let publisher = ["Here", "we", "go"].publisher
-publisher.subscribe(relay)
-// subject들은 subscribe 할수 있다!
+publisher.subscribe(relay)  // relay가 subscribe한다 publisher를.
+// subject들(passthroughSubject, CurrentValueSubject)은 subscribe 할 수 있다!
