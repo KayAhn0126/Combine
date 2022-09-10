@@ -20,6 +20,15 @@ center.post(name: identifier, object: nil)
 
 // KeyPath binding to NSObject instances
 
+let ageLabel = UILabel()
+print("text: \(ageLabel.text)")
+
+Just(28)
+    .map{"Age is \($0)"}
+    .assign(to: \.text, on: ageLabel)
+print("text: \(ageLabel.text!)")
+
+
 
 
 // Timer
