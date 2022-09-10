@@ -4,7 +4,14 @@ import Foundation
 import Combine
 import UIKit
 
-// URLSessionTask Publisher and JSON Decoding Operator
+// URLSessionTask Publisher and JSON Decoding Operator -> "이런것이 있다" 정도만 알고 넘어가기!
+struct SomeDecodable: Decodable { }
+URLSession.shared.dataTaskPublisher(for: URL(string: "https://www.google.com")!)
+    .map { data, response in
+        return data
+    }
+    .decode(type: SomeDecodable.self, decoder: JSONDecoder())
+
 
 
 // Notifications
@@ -19,7 +26,6 @@ center.post(name: identifier, object: nil)
 
 
 // KeyPath binding to NSObject instances
-
 let ageLabel = UILabel()
 print("text: \(ageLabel.text)")
 
