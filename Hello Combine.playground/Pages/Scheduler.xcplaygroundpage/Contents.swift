@@ -41,12 +41,12 @@ let subscription = arrPublisher
 */
 
 let subscription = arrPublisher
-    .subscribe(on: queue)
+    .subscribe(on: queue)               // publisher 가 어느 스레드에서 수행할지 결정하는 역할
     .map { value -> Int in
         print("transform: \(value), thread: \(Thread.current)")
         return value
     }
-    .receive(on: DispatchQueue.main)
+    .receive(on: DispatchQueue.main)    // element를 수신할 scheduler를 지정하는 역할
     .sink { value in
     print("Receive Value: \(value), thread: \(Thread.current)")
 }
