@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 import Combine
 
@@ -50,13 +48,3 @@ let subscription = arrPublisher
     .sink { value in
     print("Receive Value: \(value), thread: \(Thread.current)")
 }
-
-
-
-
-
-
-
-
-
-//: [Next](@next)

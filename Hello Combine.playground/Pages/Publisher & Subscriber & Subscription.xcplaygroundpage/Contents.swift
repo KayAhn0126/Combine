@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 import Combine
 let publisher = (1...6).publisher
@@ -34,4 +32,3 @@ publisher.subscribe(subscriber)  // publisher에서 subscriber까지 stream 프�
                                 // subscription의 역할
                                 //  - publisher에서 새로운 값들이 발생 했을때 subscriber가 요청한것 보다 더 많은 값을 받지 않도록 보장.
                                 //  - subscribers의 유지 및 해제를 관리.
-//: [Next](@next)

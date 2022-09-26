@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 import Combine
 
@@ -14,6 +12,7 @@ strPublisher.combineLatest(numPublisher).sink { (str, num) in
     print("Received: \(str), \(num)")
 }
 // 이렇게 사용하는 것이 더 깔끔한것 같다!
+
 /*
 Publishers.CombineLatest(strPublisher, numPublisher).sink { (str, num) in
     print("Received: \(str), \(num)")
@@ -74,6 +73,3 @@ let mergePublisherSubscription = publisher1.merge(with: publisher2).sink { value
         print("Merge: subscription received value: \(value)")
     }
 */
-
-
-//: [Next](@next)

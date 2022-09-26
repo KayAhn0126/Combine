@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 import Combine
 import UIKit
@@ -55,5 +53,3 @@ let timerSubscription = timerPublisher.sink { time in
 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
     timerSubscription.cancel()
 }
-
-//: [Next](@next)

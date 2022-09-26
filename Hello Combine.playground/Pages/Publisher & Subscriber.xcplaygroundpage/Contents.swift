@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 import Combine
 
@@ -27,11 +25,3 @@ class MyClass {
 let object = MyClass()
 let subscription3 = arrayPublisher.assign(to: \.number, on: object) // 말 그대로 assign(할당).
 // assign(to: 프로퍼티명, on: 객체) -> 어떤 객체의 어떤 프로퍼티에 할당 해야 하는지 묻는것.
-
-
-
-
-
-//: [Next](@next)
-
-

@@ -3,12 +3,12 @@ import Combine
 
 /*
  Subject
-    send(_:) 메서드를 통해 이벤트 값을 주입 시킬수 있는 Publisher
-    기존의 비동기처리 방식에서 Combine으로 전환시 유용
-    2가지 Built - In 타입
-        PassthroughSubject
+    - send(_:) 메서드를 통해 이벤트 값을 주입 시킬수 있는 Publisher
+    - 기존의 비동기처리 방식에서 Combine으로 전환시 유용
+    - 2가지 Built - In 타입
+        - PassthroughSubject
             Subscriber가 데이터를 요청하면 그 시점부터 받은 값을 전달, 전달한 값을 들고있지 않음.
-        CurrentValueSubject
+        - CurrentValueSubject
             Subscriber가 데이터를 요청하면 가지고 있던 값을 전달하고, 그때 부터 받은 값을 전달, 전달한 값 들고있음.
  */
 
@@ -39,5 +39,7 @@ variable.send("More text")
 
 
 let publisher = ["Here", "we", "go"].publisher
-publisher.subscribe(relay)  // relay가 subscribe한다 publisher를.
+publisher.subscribe(relay)
+// public func subscribe<S>(_ subject: S) -> AnyCancellable where S : Subject, Self.Failure == S.Failure, Self.Output == S.Output
+// relay라는 이름을 가진 Subject가 subscribe한다 publisher를.
 // subject들(passthroughSubject, CurrentValueSubject)은 subscribe 할 수 있다!
